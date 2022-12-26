@@ -23,7 +23,6 @@ func PortKill(port int) {
 }
 
 func AllPort(c chan<- []string, wg *sync.WaitGroup) {
-
 	// command set
 	command := "lsof -i tcp | grep LISTEN | awk '{printf \"%-15s %s| \", $1, $2}'"
 	output, err := exec.Command("/bin/sh", "-c", command).Output()
