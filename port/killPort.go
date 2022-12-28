@@ -64,7 +64,7 @@ func KillPorts() {
 		if v != "" {
 			splitSelect := strings.Split(strings.TrimSpace(v), " ")
 			PortKill(utils.SplitToInt(utils.GetLastIndex(splitSelect)))
-			fmt.Println("kill port ", utils.SplitToInt(utils.GetLastIndex(splitSelect)))
+			//fmt.Println("kill port ", utils.SplitToInt(utils.GetLastIndex(splitSelect)))
 		}
 	}
 	//wg.Done()
