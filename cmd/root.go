@@ -8,12 +8,11 @@ import (
 	"github.com/spf13/cobra"
 )
 
-
 var rootCmd = &cobra.Command{
-	Use: "port",
+	Use:   "port",
 	Short: "port - a cli to manage port",
-	Long: "manage port",
-	Run: func(cmd *cobra.Command, args []string)  {
+	Long:  "manage port",
+	Run: func(cmd *cobra.Command, args []string) {
 		if len(args) < 1 {
 			port.KillPort()
 		}
@@ -22,11 +21,11 @@ var rootCmd = &cobra.Command{
 
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
-		fmt.Fprintf(os.Stderr ,"There was an error while executing you CLI %s", err)
+		fmt.Fprintf(os.Stderr, "There was an error while executing you CLI %s", err)
 		os.Exit(1)
 	}
 }
 
 func init() {
 	rootCmd.PersistentFlags().Bool
-}
+
