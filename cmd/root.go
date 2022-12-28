@@ -27,5 +27,4 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.PersistentFlags().Bool
-
+}
