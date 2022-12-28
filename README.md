@@ -3,6 +3,8 @@
 you can kill port by using `killgo` that kill tool of tool.
 this is using `lsof` of command, if you not install lsof, can't use killgo.
 
+![killPort](assets/mult_kill.png)
+
 ## install
 
 ```bash
