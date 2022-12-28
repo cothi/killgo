@@ -77,7 +77,7 @@ func KillPorts() {
 // port kill
 // @arg port int
 func PortKill(port int) {
-	command := fmt.Sprintf("lsof -i tcp:%d | grep LISTEN | awk '{print $2}' | xargs kill", port)
+	command := fmt.Sprintf("lsof -i tcp:%d | grep LISTEN | awk '{print $2}' | xargs kill -9", port)
 	fmt.Println("search loading ")
 	_, err := exec.Command("/bin/sh", "-c", command).Output()
 	if err != nil {
